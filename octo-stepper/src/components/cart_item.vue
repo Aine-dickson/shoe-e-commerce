@@ -1,0 +1,29 @@
+<template>
+    <article>
+        <div>
+            <img src="" alt="">
+        </div>
+        <div>
+            <div>
+                <span>Name</span>
+                <span><i class="fas fa-delete"></i></span>
+            </div>
+            <div>
+                <div>
+                    <span></span>
+                    <span>Color</span>
+                </div>
+                <span>|</span>
+                <span>Size</span>
+            </div>
+            <div>
+                <span>Price</span>
+                <div>
+                    <span>-</span>
+                    <span>Value</span>
+                    <span>+</span>
+                </div>
+            </div>
+        </div>
+    </article>
+</template>

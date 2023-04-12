@@ -1,0 +1,39 @@
+<template>
+    <section>
+        <div>
+            <img src="" alt="">
+        </div>
+        <article>
+            <div>
+                <span>Name</span>
+                <div>
+                    <span>Model</span>
+                    <span>Preview</span>
+                </div>
+            </div>
+            <div>
+                <span>Description</span>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi aut rerum.</span>
+            </div>
+            <div>
+                <div>
+                    <span>Size</span>
+                    <div>
+                        <span>12</span>
+                        <span>45</span>
+                        <span>43</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Colors</span>
+                    <div>
+                        <span>Red</span>
+                        <span>Blue</span>
+                        <span>Green</span>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </article>
+    </section>
+</template>
