@@ -1,5 +1,5 @@
 <template>
-    <section class="app-container grid h-screen">
+    <section class="app-container grid h-screen bg-gray-950 text-white">
         <div class="header h-full">
             <app_header/>
         </div>
@@ -16,6 +16,7 @@
 
     import { onMounted } from 'vue';
     import { useRouter } from 'vue-router';
+    import { useStore } from 'vuex';
 
     import app_header from './includes/app_header.vue';
     import app_footer from './includes/app_footer.vue';
@@ -28,6 +29,7 @@
             app_main
         },
         setup(){
+            const store = useStore()
             const router = useRouter()
 
             onMounted(() => {
@@ -41,7 +43,7 @@
 <style>
 .app-container{
     grid-template-columns: 100%;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 7% 83% 10%;
     grid-template-areas: "header"
     "main"
     "footer";
