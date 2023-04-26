@@ -1,7 +1,7 @@
 <template>
-    <section>
-        <div v-if="searching">
-            <searchbar/>
+    <section class="h-full">
+        <searchbar/>
+        <div v-if="!searching">
             <specials/>
             <item_display/>
         </div>
@@ -13,6 +13,8 @@
 
 
 <script>
+    import { useStore } from 'vuex';
+    import { computed } from 'vue';
 
     import searchbar from '@/components/searchbar.vue';
     import specials from '@/components/specials.vue';
@@ -27,7 +29,11 @@
             item_display
         },
         setup(){
+            const store = useStore()
 
+            const searching = computed(() => store.state.searching)
+
+            return { searching }
         }
     }
 
