@@ -14,7 +14,7 @@
 
 <script>
     import { useStore } from 'vuex';
-    import { computed } from 'vue';
+    import { computed, onMounted } from 'vue';
 
     import searchbar from '@/components/searchbar.vue';
     import specials from '@/components/specials.vue';
@@ -32,6 +32,10 @@
             const store = useStore()
 
             const searching = computed(() => store.state.searching)
+
+            onMounted(() => {
+                store.commit('pageUpdate', {status: true})
+            })
 
             return { searching }
         }
