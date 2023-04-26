@@ -1,5 +1,5 @@
 <template>
-    <article class="h-[14rem] min-w-[50%] max-w-[50%] relative rounded-lg overflow-hidden bg-slate-800 p-2">
+    <article class="h-[15rem] min-w-[50%] max-w-[50%] relative rounded-lg overflow-hidden bg-slate-800 p-2">
         <div @click="preview(id)" class="h-[55%] w-full m-auto mb-3">
             <img src="/assets/image/profile.jpg" alt="" class="h-full w-full object-fill">
         </div>

@@ -1,26 +1,53 @@
 <template>
-    <footer>
-        <nav class="flex justify-between">
+    <footer class="bg-slate-800 h-full">
+        <nav class="flex justify-around items-center h-full">
            <router-link :to="{name: 'home'}">
-                <i class="fas fa-house"></i>
-                <span>Home</span>
-           </router-link> 
-           <router-link :to="{name: 'order'}">
-                <i class="fas fa-house"></i>
-                <span>Orders</span>
+                <div @click="filter('home')" class="flex flex-col items-center">
+                    <i class="fas fa-house">NI</i>
+                    <span v-if="filtrate != 'home'" class="text-sm font-light">Home</span>
+                </div>
            </router-link> 
            <router-link :to="{name: 'cart'}">
-                <i class="fas fa-house"></i>
-                <span>Cart</span>
+                <div @click="filter('cart')" class="flex flex-col items-center">
+                    <i class="fas fa-house">NI</i>
+                    <span v-if="filtrate != 'cart'" class="text-sm font-light">Cart</span>
+                </div>
+           </router-link> 
+           <router-link :to="{name: 'order'}">
+                <div @click="filter('orders')" class="flex flex-col items-center">
+                    <i class="fas fa-house">NI</i>
+                    <span v-if="filtrate != 'orders'" class="text-sm font-light">Orders</span>
+                </div>
            </router-link> 
            <router-link :to="{name: 'wishlist'}">
-                <i class="fas fa-house"></i>
-                <span>Wishlist</span>
+                <div @click="filter('wishlist')" class="flex flex-col items-center">
+                    <i class="fas fa-house">NI</i>
+                    <span v-if="filtrate != 'wishlist'" class="text-sm font-light">Wishlist</span>
+                </div>
            </router-link> 
            <router-link :to="{name: 'profile'}">
-                <i class="fas fa-house"></i>
-                <span>Profile</span>
+                <div @click="filter('profile')" class="flex flex-col items-center">
+                    <i class="fas fa-house">NI</i>
+                    <span v-if="filtrate != 'profile'" class="text-sm font-light">Profile</span>
+                </div>
            </router-link> 
         </nav>
     </footer>
 </template>
+
+<script>
+     import { ref } from 'vue';
+
+     export default {
+          setup(){
+
+               const filtrate = ref('')
+
+               const filter = (agent) => {
+                    filtrate.value = agent
+               }
+
+               return { filter, filtrate }
+          }
+     }
+</script>

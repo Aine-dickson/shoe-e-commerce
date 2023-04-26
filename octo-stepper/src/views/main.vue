@@ -1,5 +1,5 @@
 <template>
-    <section class="app-container grid h-screen bg-gray-950 text-white">
+    <section class="app-container grid min-h-screen max-h-screen bg-gray-950 text-white">
         <div class="header h-full">
             <app_header/>
         </div>
@@ -43,7 +43,7 @@
 <style>
 .app-container{
     grid-template-columns: 100%;
-    grid-template-rows: 7% 83% 10%;
+    grid-template-rows: 7% 84% 9%;
     grid-template-areas: "header"
     "main"
     "footer";

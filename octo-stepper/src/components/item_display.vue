@@ -37,12 +37,8 @@
                 <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fas fa-cat">NI</i></div>
             </div>
         </div>
-        <div class="flex justify-between mb-3 mx-2">
-            <span>Most Popular</span>
-            <span>See all</span>
-        </div>
-        <div>
-            <item/>
+        <div class="flex overflow-auto space-x-3">
+            <item v-for="(item, index) in items" :key="index"/>
         </div>
     </section>
 </template>
@@ -58,6 +54,7 @@
     },
     setup() {
         const filtrate = ref('')
+        const items = ref([{}, {}])
 
         const filter = (agent) => {
             filtrate.value = agent
@@ -67,7 +64,7 @@
             filter('all')
         })
 
-        return { filter, filtrate }
+        return { filter, filtrate, items }
     },
 }
 

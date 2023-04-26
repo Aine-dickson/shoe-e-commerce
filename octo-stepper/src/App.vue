@@ -10,14 +10,25 @@
 }
 
 nav {
-  padding: 30px;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: gray;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: white;
+      position: relative;
+      background-color: orangered;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      top: -1.5rem;
+      outline-color: rgba(5, 5, 5, 0.8);
+      outline-width: 0.8rem;
+      outline-style: solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
