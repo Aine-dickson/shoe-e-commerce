@@ -2,7 +2,7 @@
     <footer v-if="page"  class="bg-slate-800 h-full">
         <nav class="flex justify-around items-center h-full">
            <router-link :to="{name: 'home'}">
-                <div @click="filter('home')" class="flex flex-col items-center">
+                <div ref="home" @click="filter('home')" class="flex flex-col items-center">
                     <i class="fas fa-house"></i>
                     <span v-if="filtrate != 'home'" class="text-sm font-light">Home</span>
                 </div>
@@ -65,14 +65,18 @@
                const price = computed(() => store.state.cart.total)
                const action = computed(() => store.state.page.action)
                const filtrate = ref('')
+               const home = ref()
 
                const filter = () => {
                     router.afterEach(() => {
                          filtrate.value = router.currentRoute.value.name
                     })
                }
+               const loader = () => {
+                    home.value.click()
+               }
 
-               return { filter, filtrate, page, preview, action, price }
+               return { filter, loader, home, filtrate, page, preview, action, price }
           }
      }
 </script>

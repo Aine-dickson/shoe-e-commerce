@@ -7,16 +7,15 @@
             <app_main/>
         </div>
         <div class="footer h-full">
-            <app_footer/>
+            <app_footer ref="footer"/>
         </div>
     </section>
 </template>
 
 <script>
 
-    import { onMounted } from 'vue';
+    import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
-    import { useStore } from 'vuex';
 
     import app_header from './includes/app_header.vue';
     import app_footer from './includes/app_footer.vue';
@@ -29,12 +28,13 @@
             app_main
         },
         setup(){
-            const store = useStore()
-            const router = useRouter()
+            const footer = ref()
 
             onMounted(() => {
-                router.push('/home')
+                footer.value.loader()
             })
+
+            return { footer }
         }
     }
 
