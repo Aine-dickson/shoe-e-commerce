@@ -16,7 +16,7 @@
             </div>
         </section>
         <section v-else class="flex justify-between items-center p-2">
-            <span><i class="fas fa-left-chevron"></i></span>
+            <span @click="backward"><i class="fas fa-chevron-left"></i></span>
             <span>{{ page_title }}</span>
             <span><i class="fas fa-heart"></i></span>
         </section>
@@ -27,7 +27,7 @@
 
     import { ref, computed } from 'vue';
     import { useStore } from 'vuex';
-
+    import { useRouter } from 'vue-router';
 
     export default {
         components: {
@@ -35,6 +35,7 @@
         },
         setup(){
             const store = useStore()
+            const router = useRouter()
 
             const page = computed(() => store.state.page.status)
             const page_title = computed(() => store.state.page.title)
@@ -46,6 +47,9 @@
                 }
             })
 
+            const backward = () => {
+                router.back()
+            }
             const greet = (time) => {
                 if(time < 12){
                     return "Good morning"
@@ -64,7 +68,7 @@
                 greeting.value = greet(time)
             }, 1000)
 
-            return { page, page_title, userName, greeting }
+            return { backward, page, page_title, userName, greeting }
         }
     }
 

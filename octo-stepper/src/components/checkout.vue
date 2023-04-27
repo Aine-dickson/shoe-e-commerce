@@ -20,12 +20,21 @@
 </template>
 
 <script>
+    import { onMounted } from 'vue';
+    import { useStore } from 'vuex';
 
     import contact_info from './contact_info.vue';
 
     export default {
         components: {
             contact_info
+        },
+        setup(){
+            const store = useStore()
+
+            onMounted(() => {
+                store.commit('pageUpdate', {status: false, title: 'Checkout', action: 'Payment'})
+            })
         }
     }
 
