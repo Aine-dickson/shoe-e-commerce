@@ -8,13 +8,8 @@ export default createStore({
       title: ''
     },
     searching: false,
-    cart: {items: [
-        {name: 'Nike Jordan Air', price: 345.99, color:'red', size:'34', qty:2},
-        {name: 'Puman', price: 137.99, color:'orange', size:'34', qty:1},
-        {name: 'Yeza Sport', price: 99.99, color:'green', size:'34', qty:4}
-      ],
-      total: 0
-    }
+    cart: {items: [], total: 0},
+    preview: null
   },
   getters: {
   },
@@ -27,6 +22,12 @@ export default createStore({
     },
     priceSum(state, payload){
       state.cart.total = payload
+    },
+    cartUpdate(state, payload){
+      state.cart.items.push(payload)
+    },
+    previewUpdate(state, payload){
+      state.preview = payload
     }
   },
   actions: {

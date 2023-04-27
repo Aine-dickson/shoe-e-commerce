@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="flex overflow-auto space-x-3">
-            <item v-for="(item, index) in items" :key="index"/>
+            <item v-for="(item, index) in items" :key="index" :name="item.name" :color="item.color" :id="item.id" :qty="item.qty" :price="item.price" :size="item.size" :type="item.type" :reviews="item.reviews" :desc="item.desc"/>
         </div>
     </section>
 </template>
@@ -54,7 +54,10 @@
     },
     setup() {
         const filtrate = ref('')
-        const items = ref([{}, {}])
+        const items = ref([
+            {name: 'Jordarn Air', price: 234, color: 'orange', size: 34, qty: 1, type: 'Nike', id: 1, reviews: 4.3, desc: 'Lorem ipsum dolor'},
+            {name: 'Puma Nima', price: 345, color: 'white', size: 42, qty: 4, type: 'Puma', id: 2, reviews: 3.5, desc: 'Lorem ipsum conset isir lop'},
+        ])
 
         const filter = (agent) => {
             filtrate.value = agent

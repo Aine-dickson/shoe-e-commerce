@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/main',
+    path: '/',
     name: 'main',
     component: () => import('@/views/main.vue'),
     children: [
@@ -19,7 +19,12 @@ const routes = [
       {
         path: '/cart',
         name: 'cart',
-        component: () => import('@/views/pages/cart.vue')
+        component: () => import('@/views/pages/cart.vue'),
+      },
+      {
+        path: '/items/:name',
+        name: 'preview',
+        component: () => import('@/components/item_preview.vue') 
       },
       {
         path: '/orders',
