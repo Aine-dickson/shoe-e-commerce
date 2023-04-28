@@ -1,5 +1,5 @@
 <template>
-    <section class="h-full">
+    <section class="max-h-full min-h-full overflow-auto">
         <searchbar/>
         <div v-if="!searching">
             <specials/>

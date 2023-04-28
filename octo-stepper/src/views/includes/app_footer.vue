@@ -38,7 +38,7 @@
             <span class="text-gray-500">Total Price</span>
             <span class="font-bold">$ {{ price }}</span>
        </div>
-       <div class="bg-orange-700 p-2 rounded-[3rem] w-[40%] items-center justify-center space-x-3">
+       <div @click="navigate" class="bg-orange-700 p-2 rounded-[3rem] w-[40%] items-center justify-center space-x-3">
             <span>{{ action }}</span>
             <i v-if="preview" class="fas fa-cart"></i>
             <i v-else class="fas fa-arrow-right"></i>
@@ -66,6 +66,7 @@
                const action = computed(() => store.state.page.action)
                const filtrate = ref('')
                const home = ref()
+               const item = computed(() => store.state.preview)
 
                const filter = () => {
                     router.afterEach(() => {
@@ -75,8 +76,19 @@
                const loader = () => {
                     home.value.click()
                }
+               const navigate = () => {
+                    let stage = router.currentRoute.value.name
+                    if(stage == 'preview'){
+                         store.commit('cartUpdate', item.value)
+                         router.push({name: 'cart'})
+                    } else if(stage == 'cart'){
+                         router.push({name: 'checkout'})
+                    } else {
+                         console.log('made payment')
+                    }
+               }
 
-               return { filter, loader, home, filtrate, page, preview, action, price }
+               return { filter, loader, navigate, home, filtrate, page, preview, action, price }
           }
      }
 </script>

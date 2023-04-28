@@ -38,10 +38,9 @@
             'color',
             'size',
             'price',
-            'quantity'
+            'quantity',
         ],
         setup(props){
-
             const item = ref({
                 name: props.name,
                 image: props.image,
@@ -54,6 +53,7 @@
 
             const mod = (action) => {
                 if(action == 'inc'){
+
                     item.value.qty += 1
                 } else {
                     if(item.value.qty < 2){
