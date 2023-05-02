@@ -55,7 +55,7 @@
 
             const item = computed(() => store.state.preview)
             const image = computed(() => {
-                return `/assets/images/${item.value.name}.jpg`
+                return `/images/${item.value.name}.jpg`
             })
             const add_cart = () => {
                 store.commit('cartUpdate', item.value)
