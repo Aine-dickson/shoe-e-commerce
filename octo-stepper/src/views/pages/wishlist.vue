@@ -1,6 +1,6 @@
 <template>
-    <section>
-        Wishlist..
+    <section class="p-2 text-orange-500">
+        Wishlist page under construction, Check back later, thanks!
     </section>
 </template>
 

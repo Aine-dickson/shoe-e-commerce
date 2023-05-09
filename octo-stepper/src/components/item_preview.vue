@@ -1,6 +1,6 @@
 <template>
-    <section class="h-full">
-        <div class="h-[35%] w-full">
+    <section class="h-full overflow-y-auto">
+        <div class="h-[32%] w-full">
             <img :src="image" :alt="item.name" class="h-full w-full object-fill">
         </div>
         <article class="p-2 space-y-5">
@@ -13,7 +13,7 @@
             </div>
             <div class="flex flex-col">
                 <span class="font-bold mb-2">Description</span>
-                <span class="font-light text-gray-500">{{ item.desc }}</span>
+                <span class="font-light text-gray-500">{{ description }} <span class="font-bold text-white">...View more</span></span>
             </div>
             <div class="flex justify-between">
                 <div>
@@ -55,7 +55,7 @@
 
             const item = computed(() => store.state.preview)
             const image = computed(() => {
-                return `/images/${item.value.name}.jpg`
+                return `/image/${item.value.name}.png`
             })
             const add_cart = () => {
                 store.commit('cartUpdate', item.value)
@@ -71,12 +71,16 @@
                     }
                 }
             }
+            const description = computed(() => {
+                return item.value.desc.substring(0, 109)
+            })
 
             onMounted(() => {
                 store.commit('pageUpdate', {status: false, title: '', action: 'Add to Cart'})
+                console.log(image.value)
             })
 
-            return { add_cart, mod, item, image }
+            return { add_cart, mod, item, image, description }
         }
     }
 

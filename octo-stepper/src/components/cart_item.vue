@@ -1,7 +1,7 @@
 <template>
     <article class="flex w-full space-x-2 p-3">
         <div class="w-[30%] bg-slate-800 rounded-xl overflow-hidden">
-            <img :src="item.image" :alt="item.name" class="object-fill h-full w-full">
+            <img :src="image" :alt="item.name" class="object-fill h-full w-full">
         </div>
         <div class="w-[70%]">
             <div class="flex justify-between">
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import { ref } from 'vue'
+    import { ref, computed } from 'vue'
 
     export default {
         props: [
@@ -50,7 +50,9 @@
                 qty: props.quantity,
                 visual: "bg-" + props.color + "-500"
             })
-
+            const image = computed(() => {
+                return `/image/${props.name}.png`
+            })
             const mod = (action) => {
                 if(action == 'inc'){
 
@@ -64,7 +66,7 @@
                 }
             }
 
-            return { mod, item }
+            return { mod, item, image }
         }
     }
 

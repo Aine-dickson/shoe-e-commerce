@@ -1,6 +1,6 @@
 <template>
-    <section>
-        Profile..
+    <section class="p-2 text-blue-400">
+        Profile loading..
     </section>
 </template>
 

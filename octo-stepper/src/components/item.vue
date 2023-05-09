@@ -36,7 +36,7 @@
                     desc: props.desc
                 })
             const image = computed(() => {
-                return `image/${props.name}.jpg`
+                return `/image/${props.name}.png`
             })
             const add_cart = () => {
                 store.commit('cartUpdate', item.value)

@@ -33,12 +33,12 @@
            </router-link> 
         </nav>
      </footer>
-     <div v-else class="flex justify-between items-center p-2">
+     <div v-else class="flex justify-between items-center px-2">
        <div class="flex flex-col">
             <span class="text-gray-500">Total Price</span>
             <span class="font-bold">$ {{ price }}</span>
        </div>
-       <div @click="navigate" class="bg-orange-700 p-2 rounded-[3rem] w-[40%] items-center justify-center space-x-3">
+       <div @click="navigate" class="bg-orange-700 p-2 rounded-[3rem] items-center justify-center space-x-3">
             <span>{{ action }}</span>
             <i v-if="preview" class="fas fa-cart"></i>
             <i v-else class="fas fa-arrow-right"></i>

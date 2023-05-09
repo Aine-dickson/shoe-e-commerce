@@ -10,31 +10,31 @@
             </div>
             <div @click="filter('nike')">
                 <div v-if="filtrate == 'nike'" class="flex items-center p-1 rounded-full space-x-1 bg-orange-700">
-                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fas fa-cat"></i></span>
-                    <span>ke</span>
+                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fab fa-vimeo-v text-2xl"></i></span>
+                    <span>Nike</span>
                 </div>
-                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fas fa-cat"></i></div>
+                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fab fa-vimeo-v text-3xl"></i></div>
             </div>
             <div @click="filter('puma')">
                 <div v-if="filtrate == 'puma'" class="flex items-center p-1 rounded-full space-x-1 bg-orange-700">
-                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fas fa-cat"></i></span>
+                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fas fa-cat text-2xl"></i></span>
                     <span>Puma</span>
                 </div>
-                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fas fa-cat"></i></div>
+                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fas fa-cat text-2xl"></i></div>
             </div>
             <div @click="filter('adidas')">
                 <div v-if="filtrate == 'adidas'" class="flex items-center p-1 rounded-full space-x-1 bg-orange-700">
-                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fas fa-cat"></i></span>
+                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fab fa-app-store text-3xl"></i></span>
                     <span>Adidas</span>
                 </div>
-                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fas fa-cat"></i></div>
+                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fab fa-app-store text-3xl"></i></div>
             </div>
             <div @click="filter('ammer')">
                 <div v-if="filtrate == 'ammer'" class="flex items-center p-1 rounded-full space-x-1 bg-orange-700">
-                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fas fa-cat"></i></span>
+                    <span class="p-1 rounded-full h-8 w-8 flex items-center justify-center bg-white text-slate-700"><i class="fab fa-discord text-2xl"></i></span>
                     <span>Ammer</span>
                 </div>
-                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fas fa-cat"></i></div>
+                <div v-else class="rounded-full h-11 w-11 flex items-center justify-center bg-slate-800"><i class="fab fa-discord text-2xl"></i></div>
             </div>
         </div>
         <div class="flex overflow-auto space-x-3">
@@ -59,7 +59,6 @@
             {name: "Adidas Ultraboost 21", price: 179.99, type: "Running Shoes", color: 'orange', size: 34, qty: 2, id: 2, reviews: 4.3, desc: "The Adidas Ultraboost 21 combines high performance with style. The shoe features a Primeknit upper that adapts to the shape of your foot for a personalized fit, and the Boost midsole provides responsive cushioning and energy return."},
             {name: "Converse Chuck Taylor All Star", price: 59.99, type: "Casual Shoes", color: 'orange', size: 34, qty: 7, id: 3, reviews: 4.3, desc: "The Converse Chuck Taylor All Star is a classic shoe that never goes out of style. With a canvas upper and rubber sole, this shoe is both comfortable and durable. Available in a variety of colors and patterns."},
             {name: "Dr. Martens 1460", price: 149.99, type: "Boots", color: 'orange', size: 34, qty: 1, id: 4, reviews: 4.3, desc: "The Dr. Martens 1460 is a classic boot with a timeless design. The smooth leather upper and air-cushioned sole provide comfort and durability, while the signature yellow stitching and heel loop add a touch of style."},
-            {name: "Adidas Ultraboost 21", price: 179.99, type: "Running Shoes", color: 'orange', size: 34, qty: 1, id: 5, reviews: 4.3, desc: "The Adidas Ultraboost 21 are designed for long-distance running. They have a lightweight yet durable construction, a responsive Boost midsole, and a breathable upper for maximum comfort."},
             {name: "Nike Air Force 1", price: 90.00, type: "Casual Shoes", color: 'orange', size: 34, qty: 1, id: 6, reviews: 4.3, desc: "The Nike Air Force 1 is a classic sneaker that has been popular for decades. They have a sleek, timeless design that looks great with any outfit. The leather upper and padded collar provide comfort and durability."},
             {name: "Reebok Nano X", price: 130.00, type: "Training Shoes", color: 'orange', size: 34, qty: 1, id: 7, reviews: 4.3, desc: "The Reebok Nano X are designed for high-intensity workouts. They have a breathable mesh upper, a responsive foam midsole, and a sturdy outsole for maximum stability and support during weightlifting and other exercises."},
             {name: "New Balance 990v5", price: 175.00, type: "Running Shoes", color: 'orange', size: 34, qty: 8, id: 1, reviews: 4.3, desc: "The New Balance 990v5 is a high-quality running shoe that provides excellent support and cushioning. They have a durable pigskin and mesh upper, a comfortable ENCAP midsole, and a rubber outsole for traction on any surface."},

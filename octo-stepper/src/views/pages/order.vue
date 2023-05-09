@@ -1,6 +1,6 @@
 <template>
-    <section>
-        Order..
+    <section class="p-2 text-blue-400">
+        Orders loading...
     </section>
 </template>
 
