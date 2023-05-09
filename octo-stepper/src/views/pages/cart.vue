@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="h-full overflow-y-auto">
         <div v-if="items.length">
             <cart_item v-for="(item, index) in items" :key="index" :name="item.name" :image="item.name" :color="item.color" :size="item.size" :price="item.price" :quantity="item.qty"/>
         </div>
