@@ -77,7 +77,6 @@
 
             onMounted(() => {
                 store.commit('pageUpdate', {status: false, title: '', action: 'Add to Cart'})
-                console.log(image.value)
             })
 
             return { add_cart, mod, item, image, description }
