@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/',
+    path: '/main',
     name: 'main',
     component: () => import('@/views/main.vue'),
     children: [
@@ -44,8 +44,8 @@ const routes = [
     ]
   },
   {
-    path: '/splash',
-    name: 'splash',
+    path: '/',
+    name: 'index',
     component: () => import('@/views/splash.vue')
   }
 ]
